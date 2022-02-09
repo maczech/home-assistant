@@ -1,0 +1,31 @@
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://mqtt
+serial:
+  port: /dev/ttyUSB0
+  adapter: deconz
+frontend:
+  port: 8080
+advanced:
+  network_key:
+    - 40
+    - 136
+    - 23
+    - 7
+    - 25
+    - 236
+    - 124
+    - 165
+    - 10
+    - 62
+    - 170
+    - 200
+    - 166
+    - 59
+    - 130
+    - 76
+homeassistant: true
+devices:
+  '0x00158d00054a1e2e':
+    friendly_name: '0x00158d00054a1e2e'
