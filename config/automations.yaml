@@ -1,0 +1,41 @@
+- id: '1644489169449'
+  alias: Otwarte drzwi garażowe
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: e6324523a2f322c04def7b008b5261c0
+    entity_id: binary_sensor.0x00158d00054a1e2e_contact
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+  condition: []
+  action:
+  - service: notify.mobile_app_ane_lx1
+    data:
+      message: Drzwi garażowe otwarte
+      title: Drzwi garażowe
+  mode: single
+- id: '1644489646346'
+  alias: Nie zgaszone światło w garażu
+  description: ''
+  trigger:
+  - type: illuminance
+    platform: device
+    device_id: 3f3aa006e9af01fd463d14785bc5e0b2
+    entity_id: sensor.0x04cf8cdf3c8a0d27_illuminance_lux
+    domain: sensor
+    above: 10
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+  condition: []
+  action:
+  - service: notify.mobile_app_ane_lx1
+    data:
+      message: Zgaś światło w garażu
+      title: Światło w grarażu
+  mode: single
