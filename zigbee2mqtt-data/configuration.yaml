@@ -31,3 +31,15 @@ devices:
     friendly_name: '0x00158d00054a1e2e'
   '0x04cf8cdf3c8a0d27':
     friendly_name: '0x04cf8cdf3c8a0d27'
+  '0x00158d00054a1e52':
+    friendly_name: '0x00158d00054a1e52'
+  '0x00158d0007c6376d':
+    friendly_name: lazienka_dzieci
+  '0x00158d0007c2b080':
+    friendly_name: lazienka
+  '0x00158d0007c64142':
+    friendly_name: kuchnia
+  '0x00158d00047dff9a':
+    friendly_name: temperatura_lazienka
+  '0x00158d00047df08c':
+    friendly_name: temperatura_antek

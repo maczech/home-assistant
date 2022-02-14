@@ -27,7 +27,7 @@
     device_id: 3f3aa006e9af01fd463d14785bc5e0b2
     entity_id: sensor.0x04cf8cdf3c8a0d27_illuminance_lux
     domain: sensor
-    above: 10
+    above: 200
     for:
       hours: 0
       minutes: 10
@@ -38,4 +38,52 @@
     data:
       message: Zgaś światło w garażu
       title: Światło w grarażu
+  mode: single
+- id: '1644832154067'
+  alias: Woda w kuchni
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 56cc668d39b0f5a2bb50c8eea0f8fbb9
+    entity_id: binary_sensor.kuchnia_water_leak
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_ane_lx1
+    data:
+      message: Woda w kuchni
+      title: Kuchnia - czujnik zalania
+  mode: single
+- id: '1644832473729'
+  alias: Woda w łazience dzieci
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 529b2164746ae65bc0a46b460677e1b3
+    entity_id: binary_sensor.0x00158d0007c6376d_water_leak
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_ane_lx1
+    data:
+      message: Woda w łazience dzieci
+      title: Czujnik zalania - łazienka dzieci
+  mode: single
+- id: '1644832720098'
+  alias: Woda w łazience
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 06f784e213edaa2bee2da336733a7775
+    entity_id: binary_sensor.0x00158d0007c2b080_water_leak
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_ane_lx1
+    data:
+      message: Woda w łazience
+      title: Czujnik załania  - łazienka
   mode: single
