@@ -25,12 +25,22 @@ advanced:
     - 59
     - 130
     - 76
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 123
+    protocol: tcp4
+    type: '5424'
+  last_seen: ISO_8601_local
+  channel: 25
 homeassistant: true
 devices:
   '0x00158d00054a1e2e':
-    friendly_name: '0x00158d00054a1e2e'
-  '0x04cf8cdf3c8a0d27':
-    friendly_name: '0x04cf8cdf3c8a0d27'
+    friendly_name: kontaktron_garaz
   '0x00158d00054a1e52':
     friendly_name: '0x00158d00054a1e52'
   '0x00158d0007c6376d':
@@ -43,3 +53,11 @@ devices:
     friendly_name: temperatura_lazienka
   '0x00158d00047df08c':
     friendly_name: temperatura_antek
+  '0x04cf8cdf3c8a0d27':
+    friendly_name: '0x04cf8cdf3c8a0d27'
+  '0xb4e3f9fffea0cc94':
+    friendly_name: Gniazdko_korytarz
+  '0xb4e3f9fffea456ad':
+    friendly_name: gniazdko_garaz
+  '0x00158d0007e4e0f9':
+    friendly_name: czujnik_ruchu_garaz
